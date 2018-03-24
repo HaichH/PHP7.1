@@ -22,16 +22,54 @@ and open the template in the editor.
             .half{
                 width: 50%;
             }
-            html{
+/*            html{
                 background: url(cake.jpg) no-repeat center center fixed; 
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
                 background-size: cover;
-            }
+            }*/
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
         </style>
     </head>
     <body>
+        <div class="fullscreen-bg">
+    <video loop muted autoplay poster="cake.jpg" class="fullscreen-bg__video">
+        <source src="rain.mp4" type="video/mp4">
+<!--        <source src="video/big_buck_bunny.mp4" type="video/mp4">
+        <source src="video/big_buck_bunny.ogv" type="video/ogg">-->
+    </video>
+        </div>
         <?php echo '<h1>'.'Employee\'s Birthday\'s '.'</h2>';?>
         <div class="half">
         <?php
