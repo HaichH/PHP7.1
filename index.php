@@ -12,13 +12,22 @@ and open the template in the editor.
         <style>
             label{
                 font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            color: white;
             }
             h1{
                 font-family: "Days One";
                 text-align:center;
+                color: pink;
             }
             .half{
                 width: 50%;
+            }
+            html{
+                background: url(cake.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
             }
         </style>
     </head>
