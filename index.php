@@ -32,7 +32,7 @@ and open the template in the editor.
         for($i =0; $i <5;$i++){
             echo ("<label>Name: $names[$i] "."</br></br>"."Birthday: $dates[$i]</label><hr/>");
         }
-       
+       //Just checking if it will cover the commmit
         ?>
         </div>
     </body>
